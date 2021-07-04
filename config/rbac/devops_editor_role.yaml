@@ -1,0 +1,24 @@
+# permissions for end users to edit devops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: devops-editor-role
+rules:
+- apiGroups:
+  - buleye.ybooks240.github.com
+  resources:
+  - devops
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - buleye.ybooks240.github.com
+  resources:
+  - devops/status
+  verbs:
+  - get

@@ -1,0 +1,7 @@
+apiVersion: buleye.ybooks240.github.com/v2
+kind: Devops
+metadata:
+  name: devops-sample
+spec:
+  # Add fields here
+  foo: bar

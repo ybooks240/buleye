@@ -1,3 +1,16 @@
 domain: ybooks240.github.com
-repo: buleye.com/m
-version: "2"
+layout:
+- go.kubebuilder.io/v3
+projectName: buleye
+repo: github.com/ybooks240/buleye
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ybooks240.github.com
+  group: buleye
+  kind: Devops
+  path: github.com/ybooks240/buleye/api/v2
+  version: v2
+version: "3"

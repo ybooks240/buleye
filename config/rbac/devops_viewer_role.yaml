@@ -1,0 +1,20 @@
+# permissions for end users to view devops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: devops-viewer-role
+rules:
+- apiGroups:
+  - buleye.ybooks240.github.com
+  resources:
+  - devops
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - buleye.ybooks240.github.com
+  resources:
+  - devops/status
+  verbs:
+  - get
